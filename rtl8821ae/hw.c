@@ -2659,33 +2659,33 @@ static u8 _rtl8821ae_get_chnl_group(u8 chnl)
 	else /*if (12 <= chnl && chnl <= 14)*/
 			group = 4;
 	} else {
-		if (36 <= chnl && chnl <= 42)
+		if (36 <= chnl && chnl <= 40)
 			group = 0;
 	else if (44 <= chnl && chnl <= 48)
 			group = 1;
-	else if (50 <= chnl && chnl <= 58)
+	else if (52 <= chnl && chnl <= 56)
 			group = 2;
 	else if (60 <= chnl && chnl <= 64)
 			group = 3;
-	else if (100 <= chnl && chnl <= 106)
+	else if (100 <= chnl && chnl <= 104)
 			group = 4;
-	else if (108 <= chnl && chnl <= 114)
+	else if (108 <= chnl && chnl <= 112)
 			group = 5;
-	else if (116 <= chnl && chnl <= 122)
+	else if (116 <= chnl && chnl <= 120)
 			group = 6;
-	else if (124 <= chnl && chnl <= 130)
+	else if (124 <= chnl && chnl <= 128)
 			group = 7;
-	else if (132 <= chnl && chnl <= 138)
+	else if (132 <= chnl && chnl <= 136)
 			group = 8;
 	else if (140 <= chnl && chnl <= 144)
 			group = 9;
-	else if (149 <= chnl && chnl <= 155)
+	else if (149 <= chnl && chnl <= 153)
 			group = 10;
 	else if (157 <= chnl && chnl <= 161)
 			group = 11;
-	else if (165 <= chnl && chnl <= 171)
+	else if (165 <= chnl && chnl <= 169)
 			group = 12;
-	else if (173 <= chnl && chnl <= 177)
+	else if (173 <= chnl && chnl <= 181)
 			group = 13;
 		else
 			/*RT_TRACE(rtlpriv, COMP_EFUSE,DBG_LOUD,
@@ -2875,12 +2875,21 @@ static void _rtl8812ae_read_txpower_info_from_hwpg(struct ieee80211_hw *hw,
 	struct txpower_info_2g pwrinfo24g;
 	struct txpower_info_5g pwrinfo5g;
 	u8 channel5g[CHANNEL_MAX_NUMBER_5G] = {
-		36, 38, 40, 42, 44, 46, 48, 50, 52, 54,
-		56, 58, 60, 62, 64, 100, 102, 104, 106,
-		108, 110, 112, 114, 116, 118, 120, 122,
-		124, 126, 128, 130, 132, 134, 136, 138,
-		140, 142, 144, 149, 151, 153, 155, 157,
-		159, 161, 163, 165, 167, 168, 169, 171, 173, 175, 177};
+		36, 40,
+		44, 48,
+		52, 56,
+		60, 64,
+		100, 104,
+		108, 112,
+		116, 120,
+		124, 128,
+		132, 136,
+		140, 144,
+		149, 153,
+		157, 159,
+		161, 165,
+		169, 173,
+		177, 181};
 	u8 channel5g_80m[CHANNEL_MAX_NUMBER_5G_80M] = {42, 58, 106, 122, 138, 155, 171};
 	u8 rf_path, index;
 	u8 i;
