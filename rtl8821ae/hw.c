@@ -2685,7 +2685,7 @@ static u8 _rtl8821ae_get_chnl_group(u8 chnl)
 			group = 11;
 	else if (165 <= chnl && chnl <= 169)
 			group = 12;
-	else if (173 <= chnl && chnl <= 181)
+	else if (173 <= chnl && chnl <= 177)
 			group = 13;
 		else
 			/*RT_TRACE(rtlpriv, COMP_EFUSE,DBG_LOUD,
@@ -2886,11 +2886,10 @@ static void _rtl8812ae_read_txpower_info_from_hwpg(struct ieee80211_hw *hw,
 		132, 136,
 		140, 144,
 		149, 153,
-		157, 159,
-		161, 165,
-		169, 173,
-		177, 181};
-	u8 channel5g_80m[CHANNEL_MAX_NUMBER_5G_80M] = {42, 58, 106, 122, 138, 155, 171};
+		157, 161,
+		165, 169,
+		173, 177};
+	u8 channel5g_80m[CHANNEL_MAX_NUMBER_5G_80M] = {48, 64, 112, 128, 144, 161, 177};
 	u8 rf_path, index;
 	u8 i;
 
@@ -2981,12 +2980,11 @@ static void _rtl8821ae_read_txpower_info_from_hwpg(struct ieee80211_hw *hw,
 		132, 136,
 		140, 144,
 		149, 153,
-		157, 159,
-		161, 165,
-		169, 173,
-		177, 181};
+		157, 161,
+		165, 169,
+		173, 177};
 	u8 channel5g_80m[CHANNEL_MAX_NUMBER_5G_80M] = {
-		42, 58, 106, 122, 138, 155, 171};
+		48, 64, 112, 128, 144, 161, 177};
 	u8 rf_path, index;
 	u8 i;
 
