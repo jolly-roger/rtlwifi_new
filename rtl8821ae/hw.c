@@ -2969,7 +2969,7 @@ static void _rtl8821ae_read_txpower_info_from_hwpg(struct ieee80211_hw *hw,
 	struct rtl_efuse *rtlefuse = rtl_efuse(rtl_priv(hw));
 	struct txpower_info_2g pwrinfo24g;
 	struct txpower_info_5g pwrinfo5g;
-	u8 channel5g[CHANNEL_MAX_NUMBER_5G] = 
+	u8 channel5g[CHANNEL_MAX_NUMBER_5G] = {
 		36, 40,
 		44, 48,
 		52, 56,
